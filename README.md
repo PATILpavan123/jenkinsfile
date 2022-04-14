@@ -3,15 +3,17 @@
                 pipeline syntax
                 
         1. scripted           |            2. declaratibe
-                              .
-      1st syntax              .             u have predefined structure as mention in syntax file
-       groovy engine          .
-    
-                              .     
-   node {                     .         pipeline {                    //must be at top of structure
-     // groovy script         .               agent any               // where to execute
-   }                          .               
-                                              stages {                // where whole work happen
+                              
+      1st syntax                          u have predefined structure as mention in syntax file
+       groovy engine                        pipeline {
+                                             agent any                
+   node {                          
+   
+  pipeline {                    //must be at top of structure
+     // groovy script                       agent any               // where to execute
+     
+   }                                       
+                                             stages {                // where whole work happen
         
                                               stage("build") {         //  bulld is stage name
                                                    steps {
